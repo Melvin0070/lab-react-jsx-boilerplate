@@ -25,6 +25,19 @@ const imageData = ()=>{
 
 function App() {
   // code here
+const imgg = imageData();
+  return (
+    <div className="App">
+      <div className="header">
+        <h1>Functional Component</h1>
+      </div>
+      <div className="image-grid">
+        {imgg.map((ele) => (
+          <img key={ele.id} src={ele.img} alt="" />
+        ))}
+      </div>
+    </div>
+  )
 }
 
 export default App;
